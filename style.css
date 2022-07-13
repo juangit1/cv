@@ -4,6 +4,9 @@ body {
     background-color: lightgray;
     text-align: center
 }
+nav {
+    display: flex;
+}
 
 h1 {
     text-align: center;
@@ -40,7 +43,9 @@ section {
 
 section p {
     column-count: 2;
-    column-gap: 20px;
+    column-gap: 1em;
+    text-align: justify;
+    margin-right: 0.5em;
 }
 
 aside {
@@ -51,7 +56,8 @@ aside {
 }
 
 footer {
-    display: inline-block;
+    float:left;
+    width:100%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
 }
 
@@ -61,4 +67,19 @@ background: -moz-linear-gradient(top,  rgba(170,170,170,0.65) 0%, rgba(170,170,1
 background: -webkit-linear-gradient(top,  rgba(170,170,170,0.65) 0%,rgba(170,170,170,0.62) 5%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  rgba(170,170,170,0.65) 0%,rgba(170,170,170,0.62) 5%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6aaaaaa', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+/* pantalla maximo 800px */
+@media screen and (max-width:800px) {
+    aside,section {
+      float:none;
+      width:100%;
+      font-size:1em;
+    }
+}
+/* pantalla maximo 400px */
+@media screen and (max-width:400px) {
+    section p {
+        column-count: 1;
+    }
 }
